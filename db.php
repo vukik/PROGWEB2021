@@ -8,7 +8,7 @@ function connect() {
     $pass = "";
     $db = "tienda";
     try {
-        $enlace = new PDO("sqlsrv:server=$server;database=$db", $user, $pass);
+        $enlace = new PDO("mysql:host=$server;dbname=$db", $user, $pass);
         if ($enlace) {
             return $enlace;
         }
