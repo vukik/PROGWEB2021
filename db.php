@@ -1,10 +1,11 @@
 <?php
 
 //$conexion=mysqli_connect("127.0.0.1","root","verde");
-function connect(){
-    $server = "127.0.0.1";
+function connect() {
+
+    $server = "localhost";
     $user = "root";
-    $pass = "verde";
+    $pass = "";
     $db = "tienda";
     try {
         $enlace = new PDO("sqlsrv:server=$server;database=$db", $user, $pass);
@@ -15,4 +16,4 @@ function connect(){
         echo "<h1>Ocurrió un error con la base de datos: " . $ex->getMessage().'</h1>';
     }
 }
-?>
+

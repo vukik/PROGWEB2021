@@ -9,7 +9,5 @@ categoria varchar(50),
 imagen varchar(100),
 stock int);
 
-
-
 insert into productos (id,nombre,precio,categoria,imagen,stock)
 values ("1","camisa",99.99,"hombre","camisa.jpg",10);
