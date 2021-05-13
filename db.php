@@ -13,10 +13,9 @@ function connect() {
         }
     } catch (Exception $ex) {
         echo "<h1>Ocurrió un error con la base de datos: " . $ex->getMessage().'</h1>';
-    }*/
-
-    <?php
-
+    }
+    
+*/
 include_once('config.php');
 
 class DB{
@@ -54,5 +53,3 @@ class DB{
     }
 }
 ?>
-}
-

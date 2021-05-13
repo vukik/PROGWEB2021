@@ -15,7 +15,7 @@
 
 <body>
     <?php
-        include_once('header.php');
+        include_once('layout/header.php');
     ?>
     <?php
         include_once('menu.php');
@@ -41,7 +41,7 @@
     <script src="main.js"></script>
 
     <?php
-        include_once('footer.php');
+        include_once('layout/footer.php');
     ?>
 </body>
 </html>
