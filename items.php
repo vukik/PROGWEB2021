@@ -10,6 +10,5 @@
         <div class="botones ">
         <button class="boton formulario__submit">Agregar al carrito</button>
     </div>
-        
     </a>
 </div>
