@@ -20,7 +20,7 @@
     <p> Inicio -> Admin -> Nuevo</p>
     <main class="contenedor sombra">
         <section>
-            <h2>Nuevo articulo</h2>
+            <h2>Modificar articulo</h2>
             <form class="contacto__formulario">
                 <fieldset>
                     <div class="contenedor-login">
@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="alinear-derecha flex">
-                        <input class="boton w-100" type="submit" value="Agregar">
+                        <input class="boton w-100" type="submit" value="Modificar información">
                     </div>
                 </fieldset>
             </form>
