@@ -27,7 +27,7 @@
         <h1> Ropa de Hombre</h1> 
         <div class="grid__producto">
             <?php
-                $response = json_decode(file_get_contents('http://localhost/Proyecto/api_productos.php?categoria=hombre'), true);
+                $response = json_decode(file_get_contents('http://localhost/PROGWEB2021/api_productos.php?categoria=hombre'), true);
                 if($response['statuscode'] == 200){
                     foreach($response['items'] as $item){
                         include('items.php');

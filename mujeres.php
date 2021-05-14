@@ -26,7 +26,7 @@
         <h1> Ropa de Mujeres</h1> 
         <div class="grid__producto">
             <?php
-                $response = json_decode(file_get_contents('http://localhost/Proyecto/api_productos.php?categoria=mujer'), true);
+                $response = json_decode(file_get_contents('http://localhost/PROGWEB2021/api_productos.php?categoria=mujer'), true);
                 if($response['statuscode'] == 200){
                     foreach($response['items'] as $item){
                         include('items.php');
@@ -37,9 +37,7 @@
             ?>
         </div>
     </main>
-
     <script src="main.js"></script>
-
     <?php
         include_once('layout/footer.php');
     ?>

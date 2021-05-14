@@ -1,7 +1,7 @@
 <?php
-include_once 'db.php';
+include_once 'db2.php';
 
-class Productos extends DB{
+class Productos extends DB2{
 
     function __construct(){
         parent::__construct();
