@@ -139,12 +139,38 @@ h1,h2,h3{
 }
 
 .banner {
-    background-image: url(banner.jpg);
+    background-image: url(img/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
     position:relative;
     margin-bottom: 2rem;
+    font-size: 5rem;
+    font-weight: bolder;
+    
+}
+
+.banner2 {
+    background-image: url(img/banner2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position:relative;
+    margin-bottom: 2rem;
+    font-size: 5rem;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.banner3 {
+    background-image: url(img/banner3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position:relative;
+    margin-bottom: 2rem;
+    font-size: 5rem;
+    font-weight: bolder;
 }
 
 .contenido-banner {
@@ -157,6 +183,7 @@ h1,h2,h3{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 .contenido-banner h2, .contenido-banner p{
