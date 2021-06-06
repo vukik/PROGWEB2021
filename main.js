@@ -26,7 +26,6 @@ bCarrito.addEventListener('click', event =>{
     }else{
         carritoContainer.style.display = '';
     }
-    
 });
 
 function actualizarCarritoUI(){
