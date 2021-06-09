@@ -290,7 +290,15 @@ h1,h2,h3{
 .campo textarea {
     height: 20rem;
 }
+
 .input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.input-option{
     width: 100%;
     border: none;
     padding: 1.5rem;
