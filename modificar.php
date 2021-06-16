@@ -20,35 +20,36 @@
     <main class="contenedor sombra">
         <section>
             <h2>Modificar articulo</h2>
-            <form class="contacto__formulario">
+            <form class="contacto__formulario" action="alta.php" method="post">
                 <fieldset>
                     <div class="contenedor-login">
                         <div class="campo">
                             <label>Nombre</label>
-                            	<input class="input-text" type="text" placeholder="Nombre del artículo">
+                            	<input id="nombre" name="nombre" class="input-text" type="text" placeholder="Nombre del artículo">
                         </div>
                         <div class="campo">
                             <label>Precio</label>
-                            <input class="input-text" type="tel" placeholder="Precio">
+                            <input id="precio" name="precio" class="input-text" type="tel" placeholder="Precio">
                         </div>
                         <div class="campo">
                             <label>Categoría</label>
-                            <input class="input-text" type="email" placeholder="Categoría del articulo">
+                            <select id="categoria" name="categoria" class="input-option" type="text" placeholder="Categoría del articulo">
+                                <option value ="hombre">Hombre</option>
+                                <option value ="mujer">Mujer</option>
+                                <option value = "hombre">Niño </option>
                         </div>
                         <div class="campo">
                             <label>Nombre de la imagen correspondiente</label>
-                            <input class="input-text" type="text" placeholder="Imagen">
+                            <input id="imagen" name="imagen" class="input-text" type="text" placeholder="Imagen">
                         </div>
                         <div class="campo">
                             <label>Stock</label>
-                            <input class="input-text" type="text" placeholder="Stock">
+                            <input id="stock" name="stock" class="input-text" type="text" placeholder="Stock">
                         </div>
-                        
-                        
                     </div>
 
                     <div class="alinear-derecha flex">
-                        <input class="boton w-100" type="submit" value="Modificar información">
+                        <input class="boton w-100" type="submit" value="Modificar" name="btn">
                     </div>
                 </fieldset>
             </form>

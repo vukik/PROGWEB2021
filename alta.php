@@ -27,42 +27,30 @@ if ($nombre == "" || $precio == "" || $categoria == "" || $imagen == "" || $stoc
         case 'Agregar':
             alta($db,$nombre,$precio,$categoria,$imagen,$stock);
         break;
-        case 'Caja':
-            baja($db,$nombre,$precio,$categoria,$imagen,$stock);
-        break;
-        case 'Cambio':
-            cambio($db,$nombre,$precio,$categoria,$imagen,$stock);
+        case 'Modificar':
+            modificar($db,$nombre,$precio,$categoria,$imagen,$stock);
         break;
         default: break;
     }
+}
 
-    function alta($db, $nombre, $precio, $categoria, $imagen, $stock){
+function alta($db, $nombre, $precio, $categoria, $imagen, $stock){
         
-        if(mysqli_query($db, 
-            "INSERT INTO `productos`(`id`, `nombre`, `precio`, `categoria`, `imagen`, `stock`) 
-            VALUES (NULL,'$nombre','$precio','$categoria', '$imagen', '$stock')"))
-        {
-            header('Location: admin.php');
-        }
-
-        /*$sql = "SELECT * FROM productos";
-        $resultado = $db->mysqli_query($sql);
-    */
-        /*$servicios = [];
-        $i = 0;
-
-        while($row = mysqli_fetch_assoc($resultado)){
-            $servicios[$i] = $row['id'];
-            $servicios[$i] = $row['nombre'];
-            $servicios[$i] = $row['precio'];
-            $servicios[$i] = $row['categoria'];
-            $servicios[$i] = $row['imagen'];
-            $servicios[$i] = $row['stock'];
-            $i++;
-        }
-
-        echo "<pre>";
-        var_dump (json_encode($servicios));
-        echo "</pre>";*/
+    if(mysqli_query($db, 
+        "INSERT INTO `productos`(`id`, `nombre`, `precio`, `categoria`, `imagen`, `stock`) 
+        VALUES (NULL,'$nombre','$precio','$categoria', '$imagen', '$stock')"))
+    {
+        header('Location: admin.php');
     }
+
+}
+
+function modificar($db, $nombre, $precio, $categoria, $imagen, $stock){
+        
+    if(mysqli_query($db, 
+        "UPDATE `productos` SET precio='$precio', categoria='$categoria', imagen='$imagen', stock='$stock' WHERE nombre='$nombre' "))
+    {
+        header('Location: admin.php');
+    }
+
 }

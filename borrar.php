@@ -20,17 +20,17 @@
     <main class="contenedor sombra">
         <section>
             <h2>Eliminar articulo</h2>
-            <form class="contacto__formulario">
+            <form class="contacto__formulario" action="eliminar.php" method="post">
                 <fieldset>
                     <div class="contenedor-login">
                         <div class="campo">
                             <label>Nombre</label>
-                            	<input class="input-text" type="text" placeholder="Nombre del artículo">
+                            	<input id="nombre" name="nombre" class="input-text" type="text" placeholder="Nombre del artículo">
                         </div>
                     </div>
 
                     <div class="alinear-derecha flex">
-                        <input class="boton w-100" type="submit" value="Eliminar">
+                        <input class="boton w-100" type="submit" value="Eliminar" name="btn">
                     </div>
                 </fieldset>
             </form>
