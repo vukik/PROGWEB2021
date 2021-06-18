@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <script src="validar.js"> </script>
     </head>
 
 <body>

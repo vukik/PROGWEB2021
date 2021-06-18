@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <script src="validar.js"> </script>
     </head>
 
 <body>
@@ -20,7 +21,7 @@
     <main class="contenedor sombra">
         <section>
             <h2>Nuevo articulo</h2>
-            <form class="contacto__formulario" action="alta.php" method="post">
+            <form class="contacto__formulario" action="alta.php" method="post" onsubmit="return validar();">
                 <fieldset>
                     <div class="contenedor-login">
                         <div class="campo">
