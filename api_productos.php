@@ -2,19 +2,19 @@
 
 include_once 'productos.php';
 
-if(isset($_GET['categoria'])){
+if(isset($_GET['categoria'])){                      //Si hay categoria
     $categoria = $_GET['categoria'];
     
-    if($categoria == ''){
+    if($categoria == ''){ //Si no hay categoria, manda un mensaje de error
         echo json_encode(['statuscode' => 400, 
                             'response' => 'No existe la categoría']);    
     }else{
         $productos = new Productos();
-        $items = $productos->getItemsByCategory($categoria);
+        $items = $productos->getItemsByCategory($categoria);    //Se crea un objeto productos y se agregan los items
         echo json_encode(['statuscode' => 200, 
                         'items' => $items]);
     }
-} else if(isset($_GET['get-item'])){
+} else if(isset($_GET['get-item'])){            //Si hay objeto
     $id = $_GET['get-item'];
 
     if($id == ''){
@@ -22,7 +22,7 @@ if(isset($_GET['categoria'])){
                             'response' => 'No hay valor para id']);    
     }else{
         $productos = new Productos();
-        $item = $productos->get($id);
+        $item = $productos->get($id); //Devuelve un elemento en específico del carrito
         echo json_encode(['statuscode' => 200, 
                         'item' => $item]);
     }

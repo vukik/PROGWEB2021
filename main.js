@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () =>{
+document.addEventListener('DOMContentLoaded', () =>{ //Se mantiene y se guarda la información del carrito en una cookie
     const cookies = document.cookie.split(';');
     let cookie = null;
     cookies.forEach(item =>{
@@ -13,10 +13,9 @@ document.addEventListener('DOMContentLoaded', () =>{
     }
 })
 
-const bCarrito = document.querySelector('.btn-carrito');
+const bCarrito = document.querySelector('.btn-carrito'); //Referencia al objeto cuando hay un click a la clase btn-carrito
 
-bCarrito.addEventListener('click', event =>{
-    //e.preventDefault();
+bCarrito.addEventListener('click', event =>{            //Al darle click al boton del carrito se muestra un block, si se le vuelve a dar click, se esconde
     const carritoContainer = document.querySelector('#carrito-container');
 
     if(carritoContainer.style.display == ''){
@@ -29,14 +28,15 @@ bCarrito.addEventListener('click', event =>{
 });
 
 function actualizarCarritoUI(){
-    fetch('http://localhost/Proyecto/api_carrito.php?action=mostrar')
+    fetch('http://localhost/Proyecto/api_carrito.php?action=mostrar') 
     .then(response => response.json())
     .then(data =>{
         console.log(data);
         let tablaCont = document.querySelector('#tabla');
         let precioTotal = '';
         let html = ``;
-        data.items.forEach(element => {
+
+        data.items.forEach(element => { //Bloques de HTML para cada producto
             html += `
                 <div class='fila'>
                     <div class='imagen'><img src='img/${element.imagen}' width='100' /></div>
@@ -50,7 +50,6 @@ function actualizarCarritoUI(){
                 </div>
             `;
         });
-
         
         precioTotal = `<p>Total: $${data.info.total}</p>`;
         tablaCont.innerHTML = precioTotal + html;
@@ -59,8 +58,8 @@ function actualizarCarritoUI(){
         //bCarrito.innerHTML = `items=${data.info.count}`;
         document.querySelectorAll('.btn-remove').forEach(boton =>{
             boton.addEventListener('click', e => {
-                const id = boton.parentElement.parentElement.children[0].value;
-                removeItemFromCarrito(id);
+                const id = boton.parentElement.parentElement.children[0].value; //Children[0] es el id, o el input tipo hidden
+                removeItemFromCarrito(id);      //Por cada click se elimina un producto.
             })
         });
     });

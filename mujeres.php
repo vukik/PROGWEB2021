@@ -26,13 +26,14 @@
         <h1> Ropa de Mujeres</h1> 
         <div class="grid__producto">
             <?php
+            //Se usa un jsondecode para decodificar el array de productos, donde en el link dice la categoria deseada
                 $response = json_decode(file_get_contents('http://localhost/PROGWEB2021/api_productos.php?categoria=mujer'), true);
                 if($response['statuscode'] == 200){
-                    foreach($response['items'] as $item){
+                    foreach($response['items'] as $item){ //Por cada producto en el array, se crea un nuevo items.php, que es donde se le da el estilo del menu
                         include('items.php');
                     }
                 }else{
-                    // mostrar error
+                    // Si no es exitoso el response, no hará nada
                 }
             ?>
         </div>

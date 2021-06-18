@@ -27,11 +27,11 @@ if(isset($_GET['action'])){
 }
 
 function mostrar($carrito){
-    $itemsCarrito = json_decode($carrito->load(), 1);
+    $itemsCarrito = json_decode($carrito->load(), 1); //Se carga el arreglo en la sesión
     $fullItems = [];
     $total = 0;
     $totalItems = 0;
-    foreach($itemsCarrito as $itemCarrito){
+    foreach($itemsCarrito as $itemCarrito){ //Por cada item en el carrito
         $httpRequest = file_get_contents('http://localhost/Proyecto/api_productos.php?get-item=' . $itemCarrito['id']); 
         $itemProducto = json_decode($httpRequest, 1)['item'];
         $itemProducto['cantidad'] = $itemCarrito['cantidad'];
